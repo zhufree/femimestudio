@@ -13,9 +13,9 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .hero {
@@ -61,7 +61,7 @@ body {
     padding: 6px 12px;
     border-radius: 20px;
     position: relative;
-    top: -20px;
+    top: -15px;
 }
 
 .status-badge::before {
@@ -91,12 +91,88 @@ body {
 .description {
     font-size: 1.25rem;
     color: #666;
+    margin-bottom: 2rem;
+}
+
+.game-intro {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section {
+    margin-bottom: 2rem;
+}
+
+.intro-section:last-child {
+    margin-bottom: 0;
+}
+
+.intro-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.intro-section h4 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 0.8rem;
+}
+
+.intro-section p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item ul,
+.theme-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-item li,
+.theme-list li {
+    color: #666;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.feature-item li::before,
+.theme-list li::before {
+    content: '•';
+    color: #10B981;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.conclusion {
+    background: rgba(16, 185, 129, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid #10B981;
+}
+
+.conclusion p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-style: italic;
 }
 
 /* 团队部分样式 */
 .team {
     padding: 100px 0;
-    background-color: #ffffff;
+    background-color: #f8f9fa;
 }
 
 .section-title {
@@ -161,6 +237,93 @@ body {
     margin: 0;
 }
 
+/* Timeline 部分样式 */
+.timeline {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #10B981;
+}
+
+.timeline-item {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #10B981;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-top: -20px;
+}
+
+.timeline-content {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.timeline-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.timeline-image {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Timeline 响应式设计 */
+@media (max-width: 768px) {
+    .timeline-container::before {
+        left: 20px;
+    }
+
+    .timeline-date {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-content {
+        margin-left: 60px;
+    }
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .hero-title {
@@ -207,5 +370,24 @@ body {
 @media (max-width: 480px) {
     .team-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-intro {
+        padding: 20px;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .intro-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .intro-section h4 {
+        font-size: 1.1rem;
     }
 }
