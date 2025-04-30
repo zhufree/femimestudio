@@ -1,11 +1,8 @@
-// 添加页面加载动画
+// 导入主应用程序
+import App from './app.js';
+
+// 当DOM加载完成后初始化应用
 document.addEventListener('DOMContentLoaded', () => {
-    const hero = document.querySelector('.hero');
-    hero.style.opacity = '0';
-    
-    // 淡入动画
-    setTimeout(() => {
-        hero.style.transition = 'opacity 1s ease-in-out';
-        hero.style.opacity = '1';
-    }, 100);
+    const app = new App();
+    app.init();
 });
