@@ -6,15 +6,21 @@ export default class Timeline {
         sectionTitle: '开发进程',
         timelineItems: [
           {
-            date: '2024年3月',
+            date: '2025年3月',
             title: '角色设计完成',
             description: '完成了游戏角色的设计和细节调整，包括表情和姿态的各种变化。',
             image: 'assets/images/character_design.png'
           },
           {
-            date: '2024年2月',
+            date: '2025年2月',
             title: '角色设定草图',
             description: '完成了游戏主要角色的设定草图，确定了整体的美术风格。',
+            image: 'assets/images/alien_draft.png'
+          },
+          {
+            date: '2025年6月',
+            title: '完成初版Demo',
+            description: '完成了游戏的核心功能开发。',
             image: 'assets/images/alien_draft.png'
           }
         ]
@@ -23,16 +29,22 @@ export default class Timeline {
         sectionTitle: 'Development Progress',
         timelineItems: [
           {
-            date: 'March 2024',
+            date: 'March 2025',
             title: 'Character Design Completed',
             description: 'Completed the character design with detailed adjustments, including various expressions and poses.',
             image: 'assets/images/character_design.png'
           },
           {
-            date: 'February 2024',
+            date: 'February 2025',
             title: 'Character Design Sketches',
             description: 'Completed sketches of the main game characters and established the overall art style.',
             image: 'assets/images/alien_draft.png'
+          },
+          {
+            date: '2025年6月',
+            title: 'First Game Demo Completed',
+            description: 'Completed the first demo of the game.',
+            image: 'assets/images/cover.jpg'
           }
         ]
       }
