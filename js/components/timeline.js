@@ -21,7 +21,7 @@ export default class Timeline {
             date: '2025年6月',
             title: '完成初版Demo',
             description: '完成了游戏的核心功能开发。',
-            image: 'assets/images/alien_draft.png'
+            image: 'assets/images/cover.jpg'
           }
         ]
       },
